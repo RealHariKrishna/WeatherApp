@@ -9,7 +9,7 @@ export const getWeatherData = async ({ city = "bengaluru" }) => {
       const result = await response.json();
       return result;
     } else {
-      throw new Error("Error while fetching");
+      throw new Error("Error getting details, check City name");
     }
   } catch (error) {
     if (error.response && error.response.data.message) {
